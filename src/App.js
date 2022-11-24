@@ -22,8 +22,9 @@ function App() {
   It also has a button that counts clicks and toggles style color. */}
   <DisplayMessage color={color} />
   <Clock />
-  <p>{count}</p>
-  <UserActions setColor={setColor} 
+  <CounterDisplay count={count} />
+  <UserActions 
+  setColor={setColor} 
   setCount={setCount} 
   count={count} 
   color={color}/>
@@ -31,6 +32,9 @@ function App() {
   );
   }
 
+  function CounterDisplay(props) {
+    return <p>{props.count}</p>;
+    }
 
   function UserActions(props) {
     return <button onClick={() => {
