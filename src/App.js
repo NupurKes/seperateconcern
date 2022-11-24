@@ -45,6 +45,7 @@ function App() {
   return <h1 style={{color: props.color}}>Hello React World</h1>;
   }
 
+  //self contained clock element
    function Clock() {
     const [time, setTime] = React.useState(
       new Date().toLocaleTimeString());
