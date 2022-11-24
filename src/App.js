@@ -1,16 +1,16 @@
 import "./App.css";
-import React from 'react';
+import React ,{ useState , useEffect } from 'react';
 
 function App() {
-  const [color, setColor] = React.useState(
+  const [color, setColor] = useState(
     JSON.parse(sessionStorage.getItem('color')) || "blue");
-  const [count, setCount] = React.useState(
+  const [count, setCount] = useState(
     JSON.parse(localStorage.getItem('count')) || 0);
  
       console.log(color);
       console.log(count);
 
-      React.useEffect(() => {
+      useEffect(() => {
   sessionStorage.setItem('color', JSON.stringify(color));
   localStorage.setItem('count', JSON.stringify(count));
   
@@ -65,7 +65,7 @@ function App() {
    function Clock() {
     const [time, setTime] = React.useState(
       new Date().toLocaleTimeString());
-      React.useEffect(() => {
+      useEffect(() => {
       const interval = setInterval(() =>
       setTime(new Date().toLocaleTimeString()), 2000);
       return () => {clearInterval(interval);}
