@@ -13,7 +13,7 @@ function App() {
   localStorage.setItem('count', JSON.stringify(count));
   const interval = setInterval(() => setTime(new Date().toLocaleTimeString(), 1000));
   return () => {clearInterval(interval);}
-  }, [color, count,time]);
+  }, [color, count]);
 
 
   return (<div>
