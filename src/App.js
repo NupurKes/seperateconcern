@@ -32,16 +32,19 @@ function App() {
   );
   }
 
+
+  
+
   function CounterDisplay(props) {
     return <p>{props.count}</p>;
     }
 
   function UserActions(props) {
-    return <button onClick={() => {
-    props.setColor(toggle(props.color));
-    props.setCount(props.count+1)}}>
-    Click me React
-    </button>
+    const handleOnClick = () => {
+      props.setColor(toggle(props.color));
+      props.setCount(props.count+1)};
+    return <button onClick={handleOnClick}>
+    Change color React </button>;
     }
 
   function toggle(color){
