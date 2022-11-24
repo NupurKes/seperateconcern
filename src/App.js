@@ -57,6 +57,4 @@ function App() {
       return <p>React Clock: {time} </p>
      }
   
-
-
 export default App;
