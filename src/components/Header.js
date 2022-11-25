@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Header.css";
 import HomeButton from "./HomeButton";
 import { NavLink } from "react-router-dom";
 
@@ -10,34 +10,25 @@ export default function Header() {
         <HomeButton />
       </div>
       <div>
-        <NavLink
-          style={({ isActive }) =>
-            isActive ? { color: "yellow" } : { color: "blue" }
-          }
-          to="/"
-        >
-          {" "}
-          Home
-        </NavLink>
-        <NavLink
-          style={({ isActive }) =>
-            isActive ? { color: "yellow" } : { color: "blue" }
-          }
-          to="/about"
-        >
-          {" "}
-          About
+
+      <NavLink className={({ isActive }) =>
+           isActive ? "link-active" : "link-inactive" }
+           to="/" > Home
+           
         </NavLink>
 
-        <NavLink
-          style={({ isActive }) =>
-            isActive ? { color: "yellow" } : { color: "blue" }
-          }
-          to="/contact"
-        >
-          {" "}
-          Contact
+        
+        <NavLink className={({ isActive }) =>
+           isActive ? "link-active" : "link-inactive" }
+           to="/about" > About
+           
         </NavLink>
+
+        <NavLink className={({ isActive }) =>
+           isActive ? "link-active" : "link-inactive" }
+           to="/contact" > Contact
+
+</NavLink>
       </div>
     </div>
   );
