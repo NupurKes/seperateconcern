@@ -16,7 +16,7 @@ return (
 </Route>
 <Route path="*" element={<p>Invalid URL</p>} />
     </Routes>
-</div>)
+</div>);
 }
 
 export default App;
