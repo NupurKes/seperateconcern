@@ -3,7 +3,7 @@ import DbData from  "../components/DbData";
 
 export default function Home() {
   return (
-    <div>
+    <div className="content">
         <DbData />
     </div>
   )

@@ -1,7 +1,20 @@
 import React from 'react'
 
-export default function Footer() {
+const Footer = () =>{
+    let footerStyle ={
+      position: "fixed",
+      left: "0",
+      bottom: "0",
+      width: "100%",
+      backgroundColor: "#3f51b5",
+      color: "white",
+      textAlign: "center",
+   }
   return (
-    <div><h3>Copyright &copy; Nupur</h3></div>
+    <footer style={footerStyle}>
+        <p>Copyright &copy; Nupur</p>
+    </footer>
   )
 }
+
+export default Footer;

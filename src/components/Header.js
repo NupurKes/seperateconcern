@@ -6,16 +6,16 @@ import { NavLink } from "react-router-dom";
 
 
 export default function Header() {
-  const buttonStyle = {
-    backgroundColor: "green",
-    border: "none",
-    color: "white",
-    padding: "15px 32px",
-    textAlign: "center",
-    textDecoration: "none",
-    display: "inline-block",
-    fontSize: "16px",
-    };
+  // const buttonStyle = {
+  //   backgroundColor: "green",
+  //   border: "none",
+  //   color: "white",
+  //   padding: "15px 32px",
+  //   textAlign: "center",
+  //   textDecoration: "none",
+  //   display: "inline-block",
+  //   fontSize: "16px",
+  //   };
     
   return (
     <div>
@@ -23,7 +23,7 @@ export default function Header() {
         <HomeButton />
       </div>
       <div>
-
+      <nav>
         <NavLink className={({ isActive }) =>
            isActive ? "link-active" : "link-inactive" }
            to="/" > Home
@@ -42,12 +42,13 @@ export default function Header() {
            to="/contact" > Contact
         </NavLink>
 
-        <NavLink to ="/">
+        {/* <NavLink to ="/">
       <button style={buttonStyle}>
       {" "}
       <p>Home</p>
     </button>
-    </NavLink>
+    </NavLink> */}
+    </nav>
       </div>
     </div>
   );
