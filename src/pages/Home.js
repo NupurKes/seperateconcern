@@ -1,10 +1,12 @@
 import React from 'react'
-import Main from  "../components/Main";
+import DbData from  "../components/DbData";
 
 export default function Home() {
   return (
     <div>
-        <Main />
+        <DbData />
     </div>
   )
 }
+
+ 
