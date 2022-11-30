@@ -12,8 +12,8 @@ function callPostBody() {
     fetch("http://localhost:3001/users", {
     method: "POST",
     body: JSON.stringify({
-    username: "nupur",
-     password: "nupur121",
+    username: "thussainz",
+     password: "Abcd1234!",
     }),
     headers: {
     "Content-type": "application/json;charset=UTF-8",

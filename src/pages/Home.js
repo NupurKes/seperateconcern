@@ -6,24 +6,28 @@ import DbData from  "../components/DbData";
 // import DbData4 from  "../components/DbData4";
 // import DbData5 from  "../components/DbData5";
 // import DbData6 from  "../components/DbData6";
-// import DbData7 from  "../components/DbData7";
-import Register from "../components/Register";
-import Login from "../components/Login";
+import DbData7 from  "../components/DbData7";
+import DbData8 from "../components/DbData8";
+//import Login from "../components/Login";
+import LoginForm from '../components/LoginForm';
 
 
 export default function Home() {
   return (
     <div className="content">
         <DbData />
-        {/* <DbData1 />
-        <DbData2 />
-        <DbData3 />
-        <DbData4 />
-        <DbData5 />
-        <DbData6 />
-        <DbData7 /> */}
-        <Register/>
-        <Login />
+        <LoginForm />
+         {/*<DbData1 />
+         // <DbData2 />
+        // <DbData3 />
+        // <DbData4 />
+        // <DbData5 />
+        // <DbData6 />
+       
+         <Login />  */}
+           
+        <DbData8/><br/>
+        <DbData7 />
        
     </div>
   )

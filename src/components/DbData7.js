@@ -8,7 +8,7 @@ return (
 )}
 
 function callDeleteParams() {
-    fetch("http://localhost:3001/users/aryan",
+    fetch("http://localhost:3001/users/th",
     { method: "DELETE" })
     .then((data) => data.json())
     .then((json) =>
