@@ -24,10 +24,10 @@ export default function Header() {
     
   return (
     <div>
-      <div>
+      {/* <div>
       
         <HomeButton />
-      </div>
+      </div> */}
       <div>
       <nav>
         <NavLink className={({ isActive }) =>
