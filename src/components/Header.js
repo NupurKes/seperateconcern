@@ -2,10 +2,15 @@ import React from "react";
 import "./Header.css";
 import HomeButton from "./HomeButton";
 import { NavLink } from "react-router-dom";
-
+import { LoggedInContext } from "../App";
+import { useContext } from 'react'
+import { Button } from "@mui/material";
+import LogoutButton from "./LogoutButton";
 
 
 export default function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useContext(LoggedInContext);
+
   // const buttonStyle = {
   //   backgroundColor: "green",
   //   border: "none",
@@ -20,6 +25,7 @@ export default function Header() {
   return (
     <div>
       <div>
+      
         <HomeButton />
       </div>
       <div>
@@ -42,6 +48,12 @@ export default function Header() {
            to="/contact" > Contact
         </NavLink>
 
+        <span className="text-white">
+      {isLoggedIn ? "Welcome" : "Please login"}
+      </span>
+      {isLoggedIn && <LogoutButton />} 
+        
+
         {/* <NavLink to ="/">
       <button style={buttonStyle}>
       {" "}
@@ -50,6 +62,7 @@ export default function Header() {
     </NavLink> */}
     </nav>
       </div>
+      
     </div>
   );
 }

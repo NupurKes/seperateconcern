@@ -10,24 +10,27 @@ import DbData7 from  "../components/DbData7";
 import DbData8 from "../components/DbData8";
 //import Login from "../components/Login";
 import LoginForm from '../components/LoginForm';
-
+import { LoggedInContext } from "../App";
+import { useContext } from 'react';
 
 export default function Home() {
+  const [isLoggedIn, setIsLoggedIn] = useContext(LoggedInContext);
   return (
     <div className="content">
-        <DbData />
-        <LoginForm />
+        {/*<DbData />
+        {!isLoggedIn && <LoginForm />} 
+        
          {/*<DbData1 />
          // <DbData2 />
         // <DbData3 />
         // <DbData4 />
         // <DbData5 />
         // <DbData6 />
-       
+       <DbData7 />
          <Login />  */}
-           
+           <LoginForm/>
         <DbData8/><br/>
-        <DbData7 />
+        
        
     </div>
   )
